@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>חוות החתולים | פנסיון בוטיק לחתולים בשרון</title>
+  <meta name="description" content="חוות החתולים - פנסיון בוטיק לחתולים בשרון. שהיות קצרות וארוכות, הסעות, טיפול אוהב ומקצועי. 052-4338044">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Karantina:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --green-deep: #2d6e3f;
+      --green-light: #3a8a4f;
+      --gold: #e8a628;
+      --gold-light: #ffd484;
+      --cream: #f5f0e8;
+      --wood-brown: #8B6914;
+      --text-dark: #2d3a2e;
+    }
+
+    body {
+      font-family: 'Heebo', sans-serif;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .display-font {
+      font-family: 'Karantina', cursive;
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: url('images/hero.png') center/cover no-repeat;
+      padding: 2rem;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(135,206,235,0.15) 0%, rgba(245,240,232,0.3) 100%);
+    }
+
+    /* Logo above the sign */
+    .hero-logo {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-logo img {
+      height: 80px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+
+    /* Wooden sign */
+    .wood-sign {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      width: 95%;
+    }
+
+    .wood-sign-bg {
+      width: 100%;
+      display: block;
+    }
+
+    .wood-sign-content {
+      position: absolute;
+      inset: 6% 6% 10% 6%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 0.75rem;
+    }
+
+    .wood-sign-content h1 {
+      font-size: clamp(2rem, 5.5vw, 3.5rem);
+      font-weight: 700;
+      color: #f5e6c8;
+      text-shadow: 2px 3px 6px rgba(0,0,0,0.6);
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+    }
+
+    .wood-sign-content p {
+      font-size: clamp(0.9rem, 2.5vw, 1.25rem);
+      color: #f0dbb8;
+      text-shadow: 1px 2px 4px rgba(0,0,0,0.6);
+      line-height: 1.7;
+      max-width: 88%;
+      font-weight: 500;
+    }
+
+    .wood-sign-content .btn {
+      margin-top: 0.75rem;
+      padding: 0.7rem 2.5rem;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
+
+    /* ─── Buttons ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-family: 'Heebo', sans-serif;
+    }
+
+    .btn-gold {
+      background: var(--gold-light);
+      color: var(--wood-brown);
+      border-radius: 18px;
+      box-shadow: 0 4px 15px rgba(255, 210, 132, 0.5);
+    }
+    .btn-gold:hover {
+      background: #ffc85a;
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--green-deep);
+      color: white;
+      box-shadow: 0 4px 15px rgba(46, 153, 77, 0.4);
+    }
+    .btn-primary:hover {
+      background: #247a3d;
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+    .btn-whatsapp:hover {
+      background: #1fb855;
+      transform: translateY(-2px);
+    }
+
+    .btn-lg {
+      padding: 1.2rem 3rem;
+      font-size: 1.25rem;
+      min-width: 320px;
+      justify-content: center;
+    }
+
+    /* ─── CTA Strip ─── */
+    .cta-strip {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 2rem;
+      background: var(--cream);
+    }
+
+    /* ─── USP Section ─── */
+    .usp {
+      padding: 4rem 2rem;
+      background: var(--cream);
+    }
+
+    .usp h2 {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--green-deep);
+      margin-bottom: 1rem;
+    }
+
+    .usp-subtitle {
+      text-align: center;
+      font-size: 1.15rem;
+      color: #5a6e5c;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      line-height: 1.7;
+    }
+
+    .usp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .usp-item {
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .usp-icon { font-size: 3rem; margin-bottom: 1rem; }
+
+    .usp-item h3 {
+      font-size: 1.6rem;
+      color: var(--green-deep);
+      margin-bottom: 0.5rem;
+    }
+
+    .usp-item p { color: #5a6e5c; line-height: 1.6; }
+
+    /* ─── Services ─── */
+    .services {
+      padding: 4rem 2rem;
+      background: linear-gradient(180deg, var(--cream) 0%, #e8f5e9 100%);
+    }
+
+    .services h2 {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--green-deep);
+      margin-bottom: 3rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover { transform: translateY(-5px); }
+
+    .service-card img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      border: 4px solid #e8f5e9;
+    }
+
+    .service-card h3 { font-size: 1.6rem; color: var(--green-deep); margin-bottom: 0.75rem; }
+    .service-card p { color: #5a6e5c; line-height: 1.6; }
+
+    /* ─── Story with wood frame + infinite slider ─── */
+    .story-section {
+      position: relative;
+      padding: 5rem 2rem;
+      background: var(--green-deep);
+      overflow: hidden;
+    }
+
+    .story-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 80px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 80'%3E%3Cpath d='M0 80 Q150 0 300 40 Q450 80 600 30 Q750 -10 900 50 Q1050 80 1200 20 L1200 0 L0 0Z' fill='%23236b35'/%3E%3C/svg%3E") center/cover no-repeat;
+      opacity: 0.3;
+    }
+
+    .story-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 80px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 80'%3E%3Cpath d='M0 0 Q150 80 300 40 Q450 0 600 50 Q750 90 900 30 Q1050 0 1200 60 L1200 80 L0 80Z' fill='%23236b35'/%3E%3C/svg%3E") center/cover no-repeat;
+      opacity: 0.3;
+    }
+
+    .story-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .story-frame {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    /* Wood frame effect */
+    .wood-frame {
+      position: relative;
+      padding: 16px;
+      background: linear-gradient(135deg, #b8860b, #daa520, #8B6914, #cd853f, #b8860b);
+      border-radius: 12px;
+      box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.3),
+        inset 0 -2px 4px rgba(0,0,0,0.3),
+        0 8px 30px rgba(0,0,0,0.4);
+    }
+
+    .wood-frame::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border: 2px solid rgba(139,69,19,0.5);
+      border-radius: 10px;
+      pointer-events: none;
+    }
+
+    .wood-frame::after {
+      content: '';
+      position: absolute;
+      top: 10px; left: 10px;
+      width: 12px; height: 12px;
+      background: radial-gradient(circle, #ccc 30%, #888 70%);
+      border-radius: 50%;
+      box-shadow: 
+        calc(100% - 32px) 0 0 0 #aaa,
+        0 calc(100% - 32px) 0 0 #aaa,
+        calc(100% - 32px) calc(100% - 32px) 0 0 #aaa;
+    }
+
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      aspect-ratio: 4/3;
+    }
+
+    .slider-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .slider-track img {
+      min-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .slider-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .slider-dot.active { background: var(--gold); }
+
+    .story-text {
+      flex: 1;
+      min-width: 300px;
+      color: white;
+    }
+
+    .story-text h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .story-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 1rem;
+    }
+
+    .story-text .btn { margin-top: 1rem; }
+
+    /* ─── Hygiene Section (new) ─── */
+    .hygiene {
+      padding: 4rem 2rem;
+      background: linear-gradient(180deg, #e8f5e9 0%, var(--cream) 100%);
+    }
+
+    .hygiene h2 {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--green-deep);
+      margin-bottom: 1rem;
+    }
+
+    .hygiene-subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #5a6e5c;
+      max-width: 650px;
+      margin: 0 auto 3rem;
+      line-height: 1.7;
+    }
+
+    .hygiene-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hygiene-card {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+
+    .hygiene-icon { font-size: 2.2rem; flex-shrink: 0; }
+
+    .hygiene-card h3 {
+      font-size: 1.15rem;
+      color: var(--green-deep);
+      margin-bottom: 0.3rem;
+      font-family: 'Heebo', sans-serif;
+      font-weight: 700;
+    }
+
+    .hygiene-card p { color: #5a6e5c; line-height: 1.5; font-size: 0.95rem; }
+
+    /* ─── Cat Facts Section (new) ─── */
+    .cat-facts {
+      padding: 4rem 2rem;
+      background: var(--cream);
+    }
+
+    .cat-facts h2 {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--green-deep);
+      margin-bottom: 1rem;
+    }
+
+    .cat-facts-subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #5a6e5c;
+      max-width: 650px;
+      margin: 0 auto 3rem;
+      line-height: 1.7;
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .fact-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      border-top: 4px solid var(--green-deep);
+    }
+
+    .fact-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+    .fact-card h3 {
+      font-size: 1.4rem;
+      color: var(--green-deep);
+      margin-bottom: 0.75rem;
+    }
+
+    .fact-card p { color: #5a6e5c; line-height: 1.7; }
+
+    /* ─── Advantages ─── */
+    .advantages {
+      padding: 4rem 2rem;
+      background: linear-gradient(180deg, var(--cream) 0%, #e8f5e9 100%);
+    }
+
+    .advantages h2 {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--green-deep);
+      margin-bottom: 3rem;
+    }
+
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .adv-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+
+    .adv-icon { font-size: 2rem; flex-shrink: 0; }
+
+    .adv-item h3 {
+      font-size: 1.15rem;
+      color: var(--green-deep);
+      margin-bottom: 0.25rem;
+      font-family: 'Heebo', sans-serif;
+      font-weight: 700;
+    }
+
+    .adv-item p { color: #5a6e5c; line-height: 1.5; font-size: 0.95rem; }
+
+    /* ─── Lightbox ─── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(0,0,0,0.9);
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    }
+
+    /* ─── FAQ ─── */
+    .faq {
+      padding: 4rem 2rem;
+      background: var(--cream);
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--green-deep);
+      margin-bottom: 2rem;
+    }
+
+    .faq-list { max-width: 750px; margin: 0 auto; }
+
+    .faq-item {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .faq-q {
+      padding: 1.25rem 1.5rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--green-deep);
+      transition: background 0.2s;
+    }
+    .faq-q:hover { background: rgba(46, 153, 77, 0.05); }
+
+    .faq-q::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: 300;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-item.open .faq-a { max-height: 300px; }
+
+    .faq-a p {
+      padding: 0 1.5rem 1.25rem;
+      line-height: 1.7;
+      color: #5a6e5c;
+    }
+
+    /* ─── Contact ─── */
+    .contact {
+      padding: 4rem 2rem;
+      background: #2d3a2e;
+      color: white;
+    }
+
+    .contact h2 {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 2rem;
+    }
+
+    .contact-center {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-subtitle {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 2rem;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .contact-email {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .contact-email a { color: #a5d6a7; text-decoration: none; }
+    .contact-email a:hover { color: #81c784; }
+
+    /* ─── Footer ─── */
+    footer {
+      background: #1a241b;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    /* ─── Floating WhatsApp ─── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      width: 60px; height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+      z-index: 50;
+      transition: transform 0.3s;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float svg { width: 32px; height: 32px; fill: white; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 768px) {
+      .hero { min-height: auto; padding: 1rem 1rem 1.5rem; }
+      .hero-logo { margin-bottom: 0.75rem; }
+      .hero-logo img { height: 50px; }
+      .cta-strip { flex-direction: column; align-items: center; padding: 1.25rem; }
+      .cta-strip .btn { width: 100%; max-width: 300px; justify-content: center; font-size: 0.95rem; padding: 0.75rem 1.5rem; }
+      .story-container { flex-direction: column; }
+      .service-card img { width: 140px; height: 140px; }
+      .btn-lg { min-width: unset; width: 100%; max-width: 350px; font-size: 1.1rem; padding: 1rem 2rem; }
+      .usp-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero - Logo + Wooden sign, no nav -->
+  <section class="hero">
+    <div class="hero-logo">
+      <img src="images/logo-hq.png" alt="חוות החתולים">
+    </div>
+    <div class="wood-sign">
+      <img src="images/sign-hq.png" alt="" class="wood-sign-bg">
+      <div class="wood-sign-content">
+        <h1>פנסיון בוטיק לחתולים</h1>
+        <p>
+          ברוכים הבאים לחוות החתולים, המקום נוצר עם הרבה אהבה
+          ותשומת לב לכל חתול. אנו מספקים פנסיון לחתולים לכל תקופה,
+          כולל תקופות ארוכות בהן אנו מתמחים. המקום בנוי בצורה מדויקת
+          לצרכי החתול.
+        </p>
+        <a href="#contact" class="btn btn-gold">הזמנה</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Strip -->
+  <div class="cta-strip">
+    <a href="https://wa.me/972524338044?text=שלום, הגעתי מאתר חוות החתולים. אשמח לקבל פרטים" class="btn btn-whatsapp">
+      💬 שלח הודעה בוואטסאפ
+    </a>
+    <a href="tel:052-4338044" class="btn btn-gold">
+      📞 052-4338044
+    </a>
+  </div>
+
+  <!-- Services -->
+  <section class="services" id="hotel">
+    <h2>השירותים שלנו</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/sleeping-cat-hq.png" alt="שהות קצרה לחתולים בפנסיון">
+        <h3>🏠 שהות לטווח קצר</h3>
+        <p>נוסעים לסוף שבוע או חופשה קצרה? החתול שלכם בידיים טובות עם טיפול יומיומי מלא, מזון איכותי ושפע חיבוקים.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/travel-cat-hq.png" alt="שהות ארוכה לחתולים בפנסיון">
+        <h3>✈️ שהות ארוכת טווח</h3>
+        <p>עוברים לחו"ל או תקופת שינוי? אנחנו מתמחים בשהיות ארוכות ודואגים שהחתול ירגיש כמו בבית - עם שגרה, יציבות ואהבה.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/cat-driver-hq.png" alt="הסעות חתולים מקצועיות">
+        <h3>🚗 שירותי הסעות</h3>
+        <p>שירות הסעות מקצועי הלוך וחזור - אנחנו באים אליכם עד הדלת, בצורה בטוחה ורגועה, עם כלוב נשיאה מותאם.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="usp">
+    <h2>למה חוות החתולים?</h2>
+    <p class="usp-subtitle">
+      אנחנו לא סתם פנסיון - אנחנו בית שני לחתול שלכם. כל פינה תוכננה בקפידה כדי שהחתול ירגיש בטוח, רגוע ומטופל.
+    </p>
+    <div class="usp-grid">
+      <div class="usp-item">
+        <div class="usp-icon">🏡</div>
+        <h3>אווירה ביתית</h3>
+        <p>סביבה חמה ורגועה, לא כלוב קר. כל חתול מקבל מרחב אישי ונוח משלו.</p>
+      </div>
+      <div class="usp-item">
+        <div class="usp-icon">❤️</div>
+        <h3>טיפול אישי</h3>
+        <p>צוות מנוסה שמכיר כל חתול בשמו ודואג לצרכים שלו - כי כל חתול הוא ייחודי.</p>
+      </div>
+      <div class="usp-item">
+        <div class="usp-icon">🕐</div>
+        <h3>מומחים לשהות ארוכה</h3>
+        <p>מתמחים בשהות ארוכת טווח - שבועות וחודשים. החתול שלכם לא לבד לרגע.</p>
+      </div>
+      <div class="usp-item">
+        <div class="usp-icon">🚗</div>
+        <h3>הסעות מהבית</h3>
+        <p>שירות הסעות הלוך וחזור עד הדלת. בלי סטרס, בלי טרחה - מגיעים אליכם.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story with wood frame slider -->
+  <section class="story-section" id="story">
+    <div class="story-container">
+      <div class="story-frame">
+        <div class="wood-frame">
+          <div class="slider-container">
+            <div class="slider-track" id="storySlider">
+              <img src="images/gal1.webp" alt="חוות החתולים - חתולים בפנסיון">
+              <img src="images/gal3.webp" alt="חוות החתולים - חתול נהנה">
+              <img src="images/gal6.webp" alt="חוות החתולים - הכניסה">
+              <img src="images/gal9.webp" alt="חוות החתולים - מתחם">
+              <img src="images/gal10.webp" alt="חוות החתולים - חתול">
+              <img src="images/gal11.webp" alt="חוות החתולים - חדרים">
+            </div>
+          </div>
+        </div>
+        <div class="slider-dots" id="sliderDots"></div>
+      </div>
+      <div class="story-text">
+        <h2>הסיפור שלנו</h2>
+        <p>
+          החלטנו לפתוח פנסיון לחתולים, מתוך הכרה לעומק של חתולים לאורך שנים רבות,
+          ומהמקום של לתת מענה ראוי והולם לכל אוהבי החתולים.
+        </p>
+        <p>
+          בחוות החתולים, כל חתול מקבל יחס אישי, מזון איכותי, ומרחב מותאם לצרכים שלו.
+          אנחנו מאמינים שחתול שמח הוא חתול שמרגיש בבית - ובדיוק את זה אנחנו נותנים.
+        </p>
+        <a href="#contact" class="btn btn-gold">דברו איתנו</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hygiene & Cleanliness -->
+  <section class="hygiene">
+    <h2>ניקיון והיגיינה ברמה הגבוהה ביותר</h2>
+    <p class="hygiene-subtitle">
+      חתולים הם יצורים רגישים שמעריכים ניקיון. אנחנו מקפידים על סטנדרט היגיינה גבוה במיוחד כדי לשמור על בריאותם ונוחותם.
+    </p>
+    <div class="hygiene-grid">
+      <div class="hygiene-card">
+        <div class="hygiene-icon">🧹</div>
+        <div>
+          <h3>ניקיון יומיומי מלא</h3>
+          <p>כל המתחם נוקה לעומק כל יום - רצפות, משטחים, מתקנים. ללא פשרות.</p>
+        </div>
+      </div>
+      <div class="hygiene-card">
+        <div class="hygiene-icon">🫧</div>
+        <div>
+          <h3>חיטוי שוטף</h3>
+          <p>חיטוי קבוע של כל השטחים עם חומרים בטוחים לחיות מחמד - מונע מחלות וזיהומים.</p>
+        </div>
+      </div>
+      <div class="hygiene-card">
+        <div class="hygiene-icon">🍽️</div>
+        <div>
+          <h3>כלי אוכל ומים נקיים</h3>
+          <p>כלי האוכל והמים מוחלפים ונשטפים מספר פעמים ביום. מים טריים תמיד זמינים.</p>
+        </div>
+      </div>
+      <div class="hygiene-card">
+        <div class="hygiene-icon">🚿</div>
+        <div>
+          <h3>ארגזי חול נקיים</h3>
+          <p>ארגזי חול מנוקים מספר פעמים ביום ומוחלפים לחלוטין באופן שוטף. כי חתולים מרגישים את ההבדל.</p>
+        </div>
+      </div>
+      <div class="hygiene-card">
+        <div class="hygiene-icon">🌬️</div>
+        <div>
+          <h3>אוורור טבעי</h3>
+          <p>המתחם בנוי עם אוורור טבעי מעולה - אוויר נקי ונעים בכל עונות השנה.</p>
+        </div>
+      </div>
+      <div class="hygiene-card">
+        <div class="hygiene-icon">🏥</div>
+        <div>
+          <h3>מעקב בריאותי</h3>
+          <p>צוות מנוסה שמזהה סימנים מוקדמים של חוסר נוחות או בעיה בריאותית ופועל מיד.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cat Facts -->
+  <section class="cat-facts">
+    <h2>ידעתם? על חתולים ופנסיון</h2>
+    <p class="cat-facts-subtitle">
+      חתולים הם יצורים מורכבים עם צרכים ייחודיים. הנה כמה דברים שחשוב לדעת כשבוחרים פנסיון.
+    </p>
+    <div class="facts-grid">
+      <div class="fact-card">
+        <div class="fact-icon">😺</div>
+        <h3>חתולים אוהבים שגרה</h3>
+        <p>חתולים מתפקדים הכי טוב עם שגרה קבועה - שעות אוכל, משחק ומנוחה. בחוות החתולים אנחנו שומרים על שגרה יציבה ומרגיעה שמזכירה את הבית.</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-icon">🐾</div>
+        <h3>כל חתול צריך מרחב</h3>
+        <p>בניגוד לכלבים, חתולים צריכים מרחב אישי ופינה שקטה משלהם. אצלנו כל חתול מקבל אזור אישי מוגדר עם מקומות מסתור, עצי טיפוס ומשטחי שכיבה מוגבהים.</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-icon">🌡️</div>
+        <h3>רגישות לשינויי סביבה</h3>
+        <p>חתולים רגישים מאוד לשינויים בסביבה ובטמפרטורה. המתחם שלנו ממוזג ומבוקר - חם בחורף, מאוורר בקיץ, תמיד נוח.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages -->
+  <section class="advantages">
+    <h2>מה מבדיל אותנו?</h2>
+    <div class="adv-grid">
+      <div class="adv-item">
+        <div class="adv-icon">🐱</div>
+        <div>
+          <h3>חתולים בלבד</h3>
+          <p>פנסיון ייעודי לחתולים - בלי כלבים, בלי רעש, בלי סטרס. סביבה רגועה שחתולים אוהבים.</p>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-icon">📸</div>
+        <div>
+          <h3>עדכונים שוטפים</h3>
+          <p>מקבלים תמונות ועדכונים על החתול שלכם ישירות ל-WhatsApp - תמיד תדעו מה קורה.</p>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-icon">🌿</div>
+        <div>
+          <h3>מרחב ירוק ופתוח</h3>
+          <p>חצר מוגנת ומרווחת עם עצי טיפוס, צעצועים וצל טבעי - גן עדן לחתולים.</p>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-icon">💊</div>
+        <div>
+          <h3>טיפול רפואי</h3>
+          <p>ניסיון במתן תרופות וטיפול בחתולים עם צרכים מיוחדים. קשר עם וטרינר סמוך.</p>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-icon">🔒</div>
+        <div>
+          <h3>מאובטח לחלוטין</h3>
+          <p>מתחם סגור ומגודר - בלי אפשרות בריחה, בלי חיות בר. בטיחות מוחלטת.</p>
+        </div>
+      </div>
+      <div class="adv-item">
+        <div class="adv-icon">🍗</div>
+        <div>
+          <h3>תזונה מותאמת</h3>
+          <p>מזון איכותי, אפשרות להביא אוכל מהבית, והתאמה לדיאטות מיוחדות או אלרגיות.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>שאלות נפוצות</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">מה כולל הפנסיון?</div>
+        <div class="faq-a">
+          <p>כל חתול מקבל מרחב אישי, מזון איכותי (ניתן להביא אוכל מהבית), ניקיון יומי, משחק ויחס אישי. אנחנו דואגים לכל הצרכים כדי שהחתול ירגיש בבית.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">האם אפשר לשהות לתקופה ארוכה?</div>
+        <div class="faq-a">
+          <p>בהחלט! אנחנו מתמחים בשהיות ארוכות - שבועות ואפילו חודשים. יש לנו ניסיון רב בליווי חתולים לטווח ארוך בצורה אוהבת ויציבה.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">איך עובד שירות ההסעות?</div>
+        <div class="faq-a">
+          <p>אנחנו מגיעים אליכם הביתה עם כלוב נשיאה מקצועי, לוקחים את החתול ומביאים אותו לפנסיון. בסיום - מחזירים עד הדלת. הכל ברוגע ובטיחות.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">האם יש חיות אחרות בפנסיון?</div>
+        <div class="faq-a">
+          <p>לא. חוות החתולים הוא פנסיון ייעודי לחתולים בלבד - בלי כלבים, בלי בעלי חיים אחרים. סביבה רגועה ובטוחה שמותאמת לחתולים.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">מקבלים עדכונים על החתול?</div>
+        <div class="faq-a">
+          <p>כמובן! אנחנו שולחים תמונות ועדכונים ישירות ל-WhatsApp שלכם כדי שתדעו שהחתול שמח ומטופל.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">האם מקבלים חתולים עם צרכים רפואיים?</div>
+        <div class="faq-a">
+          <p>כן. יש לנו ניסיון במתן תרופות, טיפול בחתולים עם מצבים כרוניים, והתאמת תזונה מיוחדת. ספרו לנו מראש ונתאים את הטיפול.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">מה לגבי חתולים ביישנים או חרדתיים?</div>
+        <div class="faq-a">
+          <p>אנחנו מנוסים בחתולים עם כל סוגי האופי. חתולים ביישנים מקבלים מרחב שקט ופינת מסתור עד שמרגישים בנוח. אנחנו ניגשים ברוגע ובסבלנות.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>צור קשר</h2>
+    <div class="contact-center">
+      <p class="contact-subtitle">רוצים לשמוע עוד? מוזמנים לפנות אלינו בכל שאלה!</p>
+      <div class="contact-buttons">
+        <a href="https://wa.me/972524338044?text=שלום, הגעתי מאתר חוות החתולים. אשמח לקבל פרטים" class="btn btn-whatsapp btn-lg">
+          💬 שלח הודעה בוואטסאפ
+        </a>
+        <a href="tel:052-4338044" class="btn btn-gold btn-lg">
+          📞 התקשרו אלינו: 052-4338044
+        </a>
+      </div>
+      <div class="contact-email">
+        ✉️ <a href="mailto:arielidan29@gmail.com">arielidan29@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 חוות החתולים | כל הזכויות שמורות</p>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/972524338044?text=שלום, הגעתי מאתר חוות החתולים. אשמח לקבל פרטים" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    // Lightbox
+    function openLightbox(img) {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Infinite smooth slider
+    const slider = document.getElementById('storySlider');
+    const images = slider.querySelectorAll('img');
+    const totalSlides = images.length;
+    let currentSlide = 0;
+    let isTransitioning = false;
+
+    // Clone first and last for infinite loop
+    const firstClone = images[0].cloneNode(true);
+    const lastClone = images[totalSlides - 1].cloneNode(true);
+    slider.appendChild(firstClone);
+    slider.insertBefore(lastClone, images[0]);
+
+    // Start at real first slide (index 1 because of prepended clone)
+    const allSlides = slider.querySelectorAll('img');
+    slider.style.transition = 'none';
+    slider.style.transform = `translateX(100%)`;
+
+    // Generate dots
+    const dotsContainer = document.getElementById('sliderDots');
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => goToSlide(i);
+      dotsContainer.appendChild(dot);
+    }
+
+    function updateDots() {
+      document.querySelectorAll('.slider-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+      });
+    }
+
+    function goToSlide(n) {
+      if (isTransitioning) return;
+      currentSlide = n;
+      isTransitioning = true;
+      slider.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      slider.style.transform = `translateX(${(currentSlide + 1) * 100}%)`;
+      updateDots();
+      setTimeout(() => { isTransitioning = false; }, 850);
+    }
+
+    function nextSlide() {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentSlide++;
+      slider.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      slider.style.transform = `translateX(${(currentSlide + 1) * 100}%)`;
+
+      if (currentSlide >= totalSlides) {
+        // Jump to real first after transition
+        setTimeout(() => {
+          slider.style.transition = 'none';
+          currentSlide = 0;
+          slider.style.transform = `translateX(100%)`;
+          isTransitioning = false;
+        }, 850);
+      } else {
+        setTimeout(() => { isTransitioning = false; }, 850);
+      }
+      updateDots();
+    }
+
+    // Auto-advance
+    setInterval(nextSlide, 4000);
+
+    // FAQ accordion
+    function toggleFaq(el) {
+      el.parentElement.classList.toggle('open');
+    }
+  </script>
+
+  <!-- Schema.org structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "חוות החתולים",
+    "description": "פנסיון בוטיק לחתולים בשרון - שהיות קצרות וארוכות, הסעות, טיפול אוהב ומקצועי",
+    "telephone": "+972-52-433-8044",
+    "email": "arielidan29@gmail.com",
+    "url": "https://xn----zhcjbgbgcj6bye.co.il",
+    "priceRange": "$$",
+    "image": "images/logo-hq.png",
+    "@id": "https://xn----zhcjbgbgcj6bye.co.il",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "שירותי פנסיון חתולים",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "שהות קצרה לחתולים"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "שהות ארוכת טווח לחתולים"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "שירותי הסעות לחתולים"}}
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "1"
+    }
+  }
+  </script>
+
+</body>
+</html>

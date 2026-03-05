@@ -1,0 +1,40 @@
+{
+  "publishes": {
+    "tender-nimbus-k65t": {
+      "siteUrl": "https://tender-nimbus-k65t.here.now/",
+      "claimToken": "d52217379b44d8fa5aea6cf91d52a253b82b80d90249d36725062e80ba858c6f",
+      "claimUrl": "https://here.now/claim?slug=tender-nimbus-k65t&token=d52217379b44d8fa5aea6cf91d52a253b82b80d90249d36725062e80ba858c6f",
+      "expiresAt": "2026-03-06T09:36:42.278Z"
+    },
+    "thorny-opera-vp5k": {
+      "siteUrl": "https://thorny-opera-vp5k.here.now/",
+      "claimToken": "526966df9f0e4942fe7660faf759961b5f4157fc75030de8502c06252714ce5c",
+      "claimUrl": "https://here.now/claim?slug=thorny-opera-vp5k&token=526966df9f0e4942fe7660faf759961b5f4157fc75030de8502c06252714ce5c",
+      "expiresAt": "2026-03-06T10:11:14.380Z"
+    },
+    "nimble-vow-kjmy": {
+      "siteUrl": "https://nimble-vow-kjmy.here.now/",
+      "claimToken": "a36ef85638d3def79f6d81ad090ccc3e8dac8db9aa763e975ca617896e5177b8",
+      "claimUrl": "https://here.now/claim?slug=nimble-vow-kjmy&token=a36ef85638d3def79f6d81ad090ccc3e8dac8db9aa763e975ca617896e5177b8",
+      "expiresAt": "2026-03-06T10:45:29.791Z"
+    },
+    "minty-inlet-bpw3": {
+      "siteUrl": "https://minty-inlet-bpw3.here.now/",
+      "claimToken": "e7e41c05495ad902c35245dd41ac6a3caef29bfc8a896981d49a71020eab6e30",
+      "claimUrl": "https://here.now/claim?slug=minty-inlet-bpw3&token=e7e41c05495ad902c35245dd41ac6a3caef29bfc8a896981d49a71020eab6e30",
+      "expiresAt": "2026-03-06T10:56:37.693Z"
+    },
+    "amber-orbit-g4xz": {
+      "siteUrl": "https://amber-orbit-g4xz.here.now/",
+      "claimToken": "33e6da9eaf1e209ff0dbd35e088c7b32c0b12dc7fdb521219a4c35627d41a4e6",
+      "claimUrl": "https://here.now/claim?slug=amber-orbit-g4xz&token=33e6da9eaf1e209ff0dbd35e088c7b32c0b12dc7fdb521219a4c35627d41a4e6",
+      "expiresAt": "2026-03-06T11:38:29.808Z"
+    },
+    "presto-bloom-4xp7": {
+      "siteUrl": "https://presto-bloom-4xp7.here.now/",
+      "claimToken": "5f80004f52c844d285f5b5362d88bd739a1222b4eb9091a32a136524693e1119",
+      "claimUrl": "https://here.now/claim?slug=presto-bloom-4xp7&token=5f80004f52c844d285f5b5362d88bd739a1222b4eb9091a32a136524693e1119",
+      "expiresAt": "2026-03-06T12:14:07.640Z"
+    }
+  }
+}
