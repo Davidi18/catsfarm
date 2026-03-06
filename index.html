@@ -54,20 +54,34 @@
     .hero-logo {
       position: relative;
       z-index: 2;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
     .hero-logo img {
-      height: 80px;
+      height: 100px;
       filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+
+    /* Hero title above the sign */
+    .hero-title {
+      position: relative;
+      z-index: 2;
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 2px 3px 8px rgba(0,0,0,0.5), 0 0 30px rgba(45,110,63,0.4);
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      text-align: center;
     }
 
     /* Wooden sign */
     .wood-sign {
       position: relative;
       z-index: 2;
-      max-width: 800px;
-      width: 95%;
+      max-width: 700px;
+      width: 90%;
     }
 
     .wood-sign-bg {
@@ -77,37 +91,56 @@
 
     .wood-sign-content {
       position: absolute;
-      inset: 6% 6% 10% 6%;
+      inset: 8% 8% 12% 8%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      gap: 0.75rem;
-    }
-
-    .wood-sign-content h1 {
-      font-size: clamp(2rem, 5.5vw, 3.5rem);
-      font-weight: 700;
-      color: #f5e6c8;
-      text-shadow: 2px 3px 6px rgba(0,0,0,0.6);
-      letter-spacing: 0.03em;
-      line-height: 1.1;
     }
 
     .wood-sign-content p {
-      font-size: clamp(0.9rem, 2.5vw, 1.25rem);
+      font-size: clamp(1rem, 2.8vw, 1.35rem);
       color: #f0dbb8;
       text-shadow: 1px 2px 4px rgba(0,0,0,0.6);
-      line-height: 1.7;
-      max-width: 88%;
+      line-height: 1.8;
+      max-width: 90%;
       font-weight: 500;
     }
 
-    .wood-sign-content .btn {
-      margin-top: 0.75rem;
-      padding: 0.7rem 2.5rem;
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
+    /* Hero CTA buttons */
+    .hero-cta {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-hero-whatsapp {
+      background: #25D366;
+      color: white;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+    }
+    .btn-hero-whatsapp:hover {
+      background: #1fb855;
+      transform: translateY(-2px);
+    }
+
+    .btn-hero-phone {
+      background: #fff;
+      color: var(--text-dark);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+    }
+    .btn-hero-phone:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
     }
 
     /* ─── Buttons ─── */
@@ -164,15 +197,7 @@
       justify-content: center;
     }
 
-    /* ─── CTA Strip ─── */
-    .cta-strip {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 2rem;
-      background: var(--cream);
-    }
+    /* ─── (CTA Strip removed - buttons now in hero) ─── */
 
     /* ─── USP Section ─── */
     .usp {
@@ -689,15 +714,14 @@
     /* ─── Responsive ─── */
     @media (max-width: 768px) {
       .hero { min-height: 100vh; min-height: 100dvh; padding: 2rem 1rem; }
-      .hero-logo { margin-bottom: 1rem; }
-      .hero-logo img { height: 60px; }
+      .hero-logo { margin-bottom: 0.25rem; }
+      .hero-logo img { height: 80px; }
+      .hero-title { font-size: clamp(2.2rem, 8vw, 3.5rem); margin-bottom: 0.75rem; }
       .wood-sign { width: 100%; max-width: 500px; }
-      .wood-sign-content { inset: 6% 6% 10% 6%; gap: 0.5rem; }
-      .wood-sign-content h1 { font-size: clamp(1.4rem, 5vw, 2.2rem); }
-      .wood-sign-content p { font-size: clamp(0.75rem, 2.2vw, 1rem); line-height: 1.5; max-width: 92%; }
-      .wood-sign-content .btn { margin-top: 0.4rem; padding: 0.5rem 2rem; font-size: clamp(0.85rem, 2.2vw, 1rem); }
-      .cta-strip { flex-direction: column; align-items: center; padding: 1.25rem; }
-      .cta-strip .btn { width: 100%; max-width: 300px; justify-content: center; font-size: 0.95rem; padding: 0.75rem 1.5rem; }
+      .wood-sign-content { inset: 8% 6% 12% 6%; }
+      .wood-sign-content p { font-size: clamp(0.8rem, 2.8vw, 1.1rem); line-height: 1.6; max-width: 95%; }
+      .hero-cta { flex-direction: column; align-items: center; width: 100%; padding: 0 1rem; margin-top: 1.25rem; }
+      .hero-cta .btn { width: 100%; max-width: 320px; justify-content: center; }
       .story-container { flex-direction: column; }
       .service-card img { width: 140px; height: 140px; }
       .btn-lg { min-width: unset; width: 100%; max-width: 350px; font-size: 1.1rem; padding: 1rem 2rem; }
@@ -707,35 +731,32 @@
 </head>
 <body>
 
-  <!-- Hero - Logo + Wooden sign, no nav -->
+  <!-- Hero - Logo + H1 + Wooden sign + CTA buttons -->
   <section class="hero">
     <div class="hero-logo">
       <img src="images/logo-hq.png" alt="חוות החתולים">
     </div>
+    <h1 class="hero-title">פנסיון בוטיק לחתולים</h1>
     <div class="wood-sign">
       <img src="images/sign-hq.png" alt="" class="wood-sign-bg">
       <div class="wood-sign-content">
-        <h1>פנסיון בוטיק לחתולים</h1>
         <p>
           ברוכים הבאים לחוות החתולים, המקום נוצר עם הרבה אהבה
           ותשומת לב לכל חתול. אנו מספקים פנסיון לחתולים לכל תקופה,
           כולל תקופות ארוכות בהן אנו מתמחים. המקום בנוי בצורה מדויקת
           לצרכי החתול.
         </p>
-        <a href="#contact" class="btn btn-gold">הזמנה</a>
       </div>
     </div>
+    <div class="hero-cta">
+      <a href="https://wa.me/972524338044?text=שלום, הגעתי מאתר חוות החתולים. אשמח לקבל פרטים" class="btn btn-hero-whatsapp">
+        💬 שלח הודעה בוואטסאפ
+      </a>
+      <a href="tel:052-4338044" class="btn btn-hero-phone">
+        📞 052-4338044
+      </a>
+    </div>
   </section>
-
-  <!-- CTA Strip -->
-  <div class="cta-strip">
-    <a href="https://wa.me/972524338044?text=שלום, הגעתי מאתר חוות החתולים. אשמח לקבל פרטים" class="btn btn-whatsapp">
-      💬 שלח הודעה בוואטסאפ
-    </a>
-    <a href="tel:052-4338044" class="btn btn-gold">
-      📞 052-4338044
-    </a>
-  </div>
 
   <!-- Services -->
   <section class="services" id="hotel">
