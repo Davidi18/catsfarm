@@ -565,6 +565,131 @@
 
     .adv-item p { color: #5a6e5c; line-height: 1.5; font-size: 0.95rem; }
 
+    /* ─── Pricing ─── */
+    .pricing {
+      padding: 4rem 2rem;
+      background: linear-gradient(180deg, #e8f5e9 0%, var(--cream) 100%);
+    }
+
+    .pricing h2 {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--green-deep);
+      margin-bottom: 1rem;
+    }
+
+    .pricing-subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #5a6e5c;
+      max-width: 650px;
+      margin: 0 auto 3rem;
+      line-height: 1.7;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .price-card {
+      position: relative;
+      background: white;
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 5px solid var(--green-deep);
+    }
+    .price-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+
+    .price-card.featured {
+      border-top-color: var(--gold);
+      background: linear-gradient(180deg, #fff 0%, #fffbf0 100%);
+    }
+
+    .price-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--wood-brown);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(232, 166, 40, 0.4);
+      white-space: nowrap;
+    }
+
+    .price-icon {
+      font-size: 3rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .price-card h3 {
+      font-size: 1.8rem;
+      color: var(--green-deep);
+      margin-bottom: 1.25rem;
+    }
+
+    .price-amount {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 0.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .price-currency {
+      font-size: 2rem;
+      color: var(--green-deep);
+      font-weight: 700;
+    }
+
+    .price-number {
+      font-family: 'Karantina', cursive;
+      font-size: 4.5rem;
+      line-height: 1;
+      color: var(--green-deep);
+      font-weight: 700;
+    }
+
+    .price-card.featured .price-currency,
+    .price-card.featured .price-number {
+      color: var(--wood-brown);
+    }
+
+    .price-period {
+      font-size: 1rem;
+      color: #5a6e5c;
+      margin-bottom: 1.5rem;
+    }
+
+    .price-note {
+      font-size: 0.95rem;
+      color: #5a6e5c;
+      line-height: 1.6;
+      padding-top: 1rem;
+      border-top: 1px dashed rgba(45, 110, 63, 0.2);
+    }
+
+    .pricing-footnote {
+      text-align: center;
+      margin-top: 2.5rem;
+      color: #5a6e5c;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
     /* ─── Lightbox ─── */
     .lightbox {
       display: none;
@@ -726,6 +851,8 @@
       .service-card img { width: 140px; height: 140px; }
       .btn-lg { min-width: unset; width: 100%; max-width: 350px; font-size: 1.1rem; padding: 1rem 2rem; }
       .usp-grid { grid-template-columns: repeat(2, 1fr); }
+      .price-card { padding: 2rem 1.5rem; }
+      .price-number { font-size: 3.8rem; }
     }
   </style>
 </head>
@@ -969,6 +1096,40 @@
     </div>
   </section>
 
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <h2>מחירים</h2>
+    <p class="pricing-subtitle">
+      שקיפות מלאה וללא הפתעות. מחירים הוגנים לשהות איכותית ואוהבת עבור החתול שלכם.
+    </p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-icon">🐱</div>
+        <h3>חתול יחיד</h3>
+        <div class="price-amount">
+          <span class="price-number">60</span>
+          <span class="price-currency">₪</span>
+        </div>
+        <div class="price-period">ליום / לחתול</div>
+        <p class="price-note">כולל מרחב אישי, מזון איכותי, ניקיון יומי, משחק ויחס אוהב.</p>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">💛 חיסכון לזוג</div>
+        <div class="price-icon">🐱🐱</div>
+        <h3>זוג חתולים</h3>
+        <div class="price-amount">
+          <span class="price-number">95</span>
+          <span class="price-currency">₪</span>
+        </div>
+        <div class="price-period">ליום / לשניהם</div>
+        <p class="price-note">מרחב משותף לזוגות חברים שמגיעים מאותו בית - נשארים יחד, נרגעים יחד.</p>
+      </div>
+    </div>
+    <p class="pricing-footnote">
+      ✨ שירותי הסעות ושהות ארוכת טווח - מחירים מותאמים. <a href="#contact" style="color: var(--green-deep); font-weight: 700;">צרו קשר לפרטים</a>
+    </p>
+  </section>
+
   <!-- FAQ -->
   <section class="faq">
     <h2>שאלות נפוצות</h2>
@@ -1160,7 +1321,8 @@
       "@type": "OfferCatalog",
       "name": "שירותי פנסיון חתולים",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "שהות קצרה לחתולים"}},
+        {"@type": "Offer", "price": "60", "priceCurrency": "ILS", "itemOffered": {"@type": "Service", "name": "שהות לחתול יחיד - ליום"}},
+        {"@type": "Offer", "price": "95", "priceCurrency": "ILS", "itemOffered": {"@type": "Service", "name": "שהות לזוג חתולים - ליום"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "שהות ארוכת טווח לחתולים"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "שירותי הסעות לחתולים"}}
       ]
